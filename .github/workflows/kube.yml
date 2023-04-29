@@ -87,7 +87,7 @@ jobs:
       - name: Checkout (action)
         uses: actions/checkout@v3
         with:
-          repository: jalantechnologies/platform-github
+          repository: Patel-world/plateform
           path: platform
           ref: ${{ inputs.platform_version }}
 
@@ -109,7 +109,7 @@ jobs:
       - name: Checkout (action)
         uses: actions/checkout@v3
         with:
-          repository: jalantechnologies/platform-github
+          repository: Patel-world/plateform
           path: platform
           ref: ${{ inputs.platform_version }}
 
@@ -129,7 +129,7 @@ jobs:
       - name: Checkout (action)
         uses: actions/checkout@v3
         with:
-          repository: jalantechnologies/platform-github
+          repository: Patel-world/plateform
           path: platform
           ref: ${{ inputs.platform_version }}
 
@@ -149,7 +149,7 @@ jobs:
       - name: Checkout (action)
         uses: actions/checkout@v3
         with:
-          repository: jalantechnologies/platform-github
+          repository: Patel-world/plateform
           path: platform
           ref: ${{ inputs.platform_version }}
 
@@ -171,7 +171,7 @@ jobs:
       - name: Checkout (action)
         uses: actions/checkout@v3
         with:
-          repository: jalantechnologies/platform-github
+          repository: Patel-world/plateform
           path: platform
           ref: ${{ inputs.platform_version }}
 
