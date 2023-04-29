@@ -78,32 +78,6 @@ on:
         value: ${{ jobs.deploy.outputs.url }}
 
 jobs:
-  analyze:
-    runs-on: ubuntu-latest
-    if: inputs.steps == '' || contains(join(inputs.steps), 'analyze')
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          # important - for analyze to work, it needs a deep clone of the repository
-          fetch-depth: 0
-
-      - name: Checkout (action)
-        uses: actions/checkout@v3
-        with:
-          repository: jalantechnologies/platform-github
-          path: platform
-          ref: ${{ inputs.platform_version }}
-
-      - name: Analyze application
-        uses: ./platform/.github/actions/analyze
-        with:
-          sonar_host_url: ${{ secrets.sonar_host_url }}
-          sonar_token: ${{ secrets.sonar_token }}
-          branch: ${{ inputs.branch }}
-          branch_base: ${{ inputs.analyze_base }}
-          pull_request_number: ${{ inputs.pull_request_number }}
-
   build:
     runs-on: ubuntu-latest
     steps:
